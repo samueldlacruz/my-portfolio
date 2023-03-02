@@ -1,7 +1,7 @@
 import AboutMeSection from "./components/AboutMeSection"
 import Header from "./components/Header"
 import HeroSection from "./components/HeroSection"
-import SkillsSection from "./components/SkillsSection"
+import ExperinceSection from "./components/ExperienceSection"
 
 function App() {
 
@@ -10,7 +10,7 @@ function App() {
       <Header />
       <HeroSection />
       <AboutMeSection />
-      <SkillsSection />
+      <ExperinceSection />
     </main>
   )
 }
