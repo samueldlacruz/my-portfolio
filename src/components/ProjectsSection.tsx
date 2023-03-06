@@ -1,5 +1,6 @@
 import { useGetProfileData } from "../hooks/useGetProfileData"
 import { IProject } from "../interfaces/common/Project"
+import programmingIconSrc from "../assets/programming.png";
 
 export const ProjectCard = (props: IProject) => {
 
@@ -34,7 +35,7 @@ const ProjectsSection = () => {
         <section id="projects" className="md:h-screen h-auto py-20 px-10 justify-center flex md:flex-row flex-col">
             <div className="w-full md:max-w-5xl max-w-3xl">
                 <h2 className="md:text-5xl text-4xl flex items-center font-medium mb-3 border-b-2 border-white/20">
-                    <img src="src/assets/programming.png" className="h-12" alt="" />
+                    <img src={programmingIconSrc} className="h-12" alt="" />
                     <span className="ml-3">Projects</span>
                 </h2>
                 <div className="mt-8 grid md:grid-cols-6 grid-cols-1 gap-5 items-center justify-center">
