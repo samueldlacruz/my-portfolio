@@ -1,0 +1,104 @@
+{
+    "user": {
+        "fullName": "Samuel de la Cruz G.",
+        "roles": [
+            "Frontend Developer"
+        ],
+        "email": "samueldlacg@gmail.com",
+        "skills": [
+            {
+                "skill": "HTML5 / CSS3"
+            },
+            {
+                "skill": "Tailwind CSS"
+            },
+            {
+                "skill": "JavaScript",
+                "specific": [
+                    "ES6+"
+                ]
+            },
+            {
+                "skill": "React.Js",
+                "specific": [
+                    "Next.js"
+                ]
+            },
+            {
+                "skill": "Vue.Js"
+            },
+            {
+                "skill": "TypeScript"
+            },
+            {
+                "skill": "Node.Js"
+            },
+            {
+                "skill": "SQL",
+                "specific": [
+                    "MySQL",
+                    "Postgres"
+                ]
+            },
+            {
+                "skill": "API Design Knowledge"
+            },
+            {
+                "skill": "GraphQL",
+                "specific": [
+                    "Apollo GraphQL"
+                ]
+            }
+        ],
+        "socialMedia": [
+            {
+                "name": "github",
+                "link": "https://github.com/samueldlacruz"
+            },
+            {
+                "name": "linkedin",
+                "link": "https://www.linkedin.com/in/samuel-de-la-cruz-guillermo/"
+            }
+        ]
+    },
+    "experinces": [
+        {
+            "startDate": "2020-12-7",
+            "company": "Media Revolution SRL",
+            "role": "Frontend Developer",
+            "location": "Santo Domingo, Dominican Republic"
+        },
+        {
+            "startDate": "2020-01-1",
+            "endDate": "2020-12-7",
+            "company": "Private clients",
+            "role": "Freelance Web Developer",
+            "location": "Santo Domingo, Dominican Republic"
+        }
+    ],
+    "projects": [
+        {
+            "name": "FAQ covid19 PWA",
+            "description": "PWA about app frequently asked questions (FAQ) about covid-19.\nIt has been developed with React + Typescript, Styled Components",
+            "links": {
+                "code": "https://github.com/samueldlacruz/FAQ-covid-19-pwa",
+                "production": "https://faq-covid-19-pwa.vercel.app/"
+            }
+        },
+        {
+            "name": "micro-ecommerce-template",
+            "description": "Simple ecommerce template created with: Vue 2 and tailwind css",
+            "links": {
+                "code": "https://github.com/samueldlacruz/simple-ecommerce-template"
+            }
+        },
+        {
+            "name": "Trending now page",
+            "description": "This is a website to read the most revealing news so far and get a directory of sources about news . it created with: React, NextJS, and tailwind CSS.",
+            "links": {
+                "code": "https://github.com/samueldlacruz/FAQ-covid-19-pwa",
+                "production": "https://trending-now-page.vercel.app/"
+            }
+        }
+    ]
+}

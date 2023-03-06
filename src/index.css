@@ -8,6 +8,23 @@
   html {
     font-family: 'Cuprum', system-ui, sans-serif;
     scroll-behavior: smooth;
+  
+  }
+
+  body {
+    @apply bg-gradient-to-b from-slate-800 to-slate-700 bg-no-repeat h-full;
+  }
+}
+
+@layer components {
+
+  /* project card component */
+  .project-card {
+    @apply border duration-150 min-h-[225px] ease-out flex flex-col justify-between bg-slate-500/20 backdrop-blur-sm border-gray-500 rounded-sm;
+  }
+
+  .project-card:hover {
+    @apply scale-[1.02] shadow-slate-800/70 bg-slate-500/40;
   }
 }
 

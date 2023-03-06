@@ -1,16 +1,18 @@
 import AboutMeSection from "./components/AboutMeSection"
 import Header from "./components/Header"
 import HeroSection from "./components/HeroSection"
-import ExperinceSection from "./components/ExperienceSection"
+import ExperinceBoard from "./components/ExperinceBoard"
+import ProjectsSection from "./components/ProjectsSection"
 
 function App() {
 
   return (
-    <main className="flex-col h-auto bg-slate-800 text-white">
+    <main className="text-white">
       <Header />
       <HeroSection />
       <AboutMeSection />
-      <ExperinceSection />
+      <ExperinceBoard />
+      <ProjectsSection />
     </main>
   )
 }
