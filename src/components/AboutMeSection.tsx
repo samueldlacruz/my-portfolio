@@ -58,7 +58,7 @@ const AboutMeSection = (
 
                         <div className="items-center mt-3 justify-center flex md:flex-row flex-col">
 
-                            <div className="flex gap-12 w-full text-lg ml-5">
+                            <div className="flex gap-12 w-full md:text-lg  text-base ml-5">
                                 {chunker<ISkill>(skills, LIMIT_SKILLS_PER_COLUMN).map((chunk, index: number) => (
                                     <ul key={`list-of-skill-chunk-${index}`} className="list-disc">
                                         {listSkills(chunk)}
@@ -66,7 +66,7 @@ const AboutMeSection = (
                                 ))}
                             </div>
 
-                            <div className="flex flex-col md:mt-0 mt-4 items-center">
+                            <div className="flex flex-col md:mt-0 mt-10 items-center">
                                 <div className="flex">
                                     <div className="w-20 h-20">
                                         <img src={hammerIconSrc} className="hover:-rotate-6 duration-75" />
