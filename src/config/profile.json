@@ -1,9 +1,11 @@
 {
     "user": {
         "fullName": "Samuel de la Cruz G.",
+        "currinculumUrl": "http://www.elasticsearch.org/search/?",
         "roles": [
             "Frontend Developer"
         ],
+        "aboutMe": "I started as a teenager by creating a file in my notepad with the EXE extension and the \"START\" command inside, then I learned HTML, CSS, and javascript, and now I'm a software developer working as a front-end developer.",
         "email": "samueldlacg@gmail.com",
         "skills": [
             {
@@ -14,13 +16,13 @@
             },
             {
                 "skill": "JavaScript",
-                "specific": [
+                "specifics": [
                     "ES6+"
                 ]
             },
             {
                 "skill": "React.Js",
-                "specific": [
+                "specifics": [
                     "Next.js"
                 ]
             },
@@ -35,7 +37,7 @@
             },
             {
                 "skill": "SQL",
-                "specific": [
+                "specifics": [
                     "MySQL",
                     "Postgres"
                 ]
@@ -45,12 +47,12 @@
             },
             {
                 "skill": "GraphQL",
-                "specific": [
+                "specifics": [
                     "Apollo GraphQL"
                 ]
             }
         ],
-        "socialMedia": [
+        "socialMedias": [
             {
                 "name": "github",
                 "link": "https://github.com/samueldlacruz"
