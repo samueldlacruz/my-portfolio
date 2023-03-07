@@ -11,10 +11,12 @@ import fileIconSrc from "./assets/file-empty.png";
 import SKeyIconSrc from './assets/s-key.png';
 import IExperience from "./interfaces/common/Experience"
 import { IProject } from "./interfaces/common/Project"
+import { Helmet, HelmetProvider } from "react-helmet-async"
 
 function App() {
 
   const userInfo = useGetProfileData(["user"])
+  const appConfig = useGetProfileData(["app"])
   const userExperinces: IExperience[] = useGetProfileData(["experinces"]);
   const projects: IProject[] = useGetProfileData(["projects"]);
 
@@ -38,27 +40,51 @@ function App() {
 
 
   return (
-    <main className="text-white">
-      <Header userEmail={userInfo.email} />
+    <>
+      <HelmetProvider>
+        <Helmet>
+          <title>{appConfig?.title}</title>
+          <link rel="icon" type="image/png" href={SKeyIconSrc} />
+          <meta name="description" content={appConfig?.description} />
+          <meta name={userInfo?.fullName} content="Author name" />
+          <meta property="og:title" content={`${userInfo?.fullName}'s portfolio`} />
+          <meta property="og:type" content="profile" />
+          <meta property="og:url" content={appConfig?.url} />
+          <meta property="og:image" content={userPicture} />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
+          <meta property="og:image:type" content="image/jpeg" />
+          <meta property="og:site_name" content={appConfig?.title} />
+          <meta
+            property="og:description"
+            content={appConfig?.description}
+          />
+          <meta property="og:locale" content="en_US" />
+        </Helmet>
 
-      <HeroSection fullName={userInfo.fullName} roles={userInfo.roles} />
+        <main className="text-white">
+          <Header userEmail={userInfo.email} />
 
-      <AboutMeSection
-        personalDetails={{ aboutMe: userInfo.aboutMe, userPicture: userPicture }}
-        skills={userInfo.skills}
-        externalLinks={externalLinks()}
-      />
+          <HeroSection fullName={userInfo.fullName} roles={userInfo.roles} />
 
-      <ExperinceBoard experiences={userExperinces} />
+          <AboutMeSection
+            personalDetails={{ aboutMe: userInfo.aboutMe, userPicture: userPicture }}
+            skills={userInfo.skills}
+            externalLinks={externalLinks()}
+          />
 
-      <ProjectsSection projects={projects} />
+          <ExperinceBoard experiences={userExperinces} />
 
-      <div className="flex flex-col mt-1 items-center justify-center w-full mb-4">
-        <span className="mb-2">&copy; all rights reserved</span>
-        <img src={SKeyIconSrc} className="md:w-10 md:h-10 h-8 w-8 opacity-25" alt="" />
-        <small className="mt-3">{userInfo.fullName}</small>
-      </div>
-    </main>
+          <ProjectsSection projects={projects} />
+
+          <div className="flex flex-col mt-1 items-center justify-center w-full mb-4">
+            <span className="mb-2">&copy; all rights reserved</span>
+            <img src={SKeyIconSrc} className="md:w-10 md:h-10 h-8 w-8 opacity-25" alt="logo" />
+            <small className="mt-3">{userInfo.fullName}</small>
+          </div>
+        </main>
+      </HelmetProvider>
+    </>
   )
 }
 

@@ -6,4 +6,3 @@
 - [ ] move information from JSON to Backend - - Service (Contentful,  etc)
 - [ ] contact me section
 - [ ] OG meta tags
-- [ ] section component

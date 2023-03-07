@@ -46,10 +46,10 @@ const Header = ({ userEmail }: { userEmail?: string }) => {
     ]
 
     return (
-        <header className="fixed z-20 backdrop-blur-sm flex justify-end bg-slate-700/10 py-3 md:px-5 px-2 w-full">
+        <header className="fixed group z-20 backdrop-blur-sm flex justify-end bg-slate-700/10 py-3 md:px-5 px-2 w-full">
             <div className="w-full flex items-center justify-between">
                 <a href="#">
-                    <img src={SKeyIconSrc} className="md:w-12 md:h-12 h-8 w-8 ease-out duration-75 opacity-25 hover:opacity-100" alt="" />
+                    <img src={SKeyIconSrc} className="md:w-12 md:h-12 h-8 w-8 ease-out duration-75 opacity-25 group-hover:opacity-100" alt="" />
                 </a>
                 <HeaderNavigation items={appMenuItems} />
             </div>
