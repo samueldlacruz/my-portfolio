@@ -34,9 +34,9 @@ const AboutMeSection = (
 
 
     const listSkills = (list: ISkill[]) => list.map((skill, index: number) =>
-        <li key={`skill-item-${index}`}>
+        <li key={`skill-item-${index}`} className="whitespace-nowrap">
             {skill.skill}{" "}
-            <small>{(skill.specifics && skill.specifics.length !== 0) && `( ${joinWithSeparator(skill.specifics)} )`}</small>
+            <small className="md:inline-block hidden">{(skill.specifics && skill.specifics.length !== 0) && `( ${joinWithSeparator(skill.specifics)} )`}</small>
         </li>
     );
 
@@ -58,7 +58,7 @@ const AboutMeSection = (
 
                         <div className="items-center mt-3 justify-center flex md:flex-row flex-col">
 
-                            <div className="flex gap-12 w-full md:text-lg  text-base ml-5">
+                            <div className="flex flex-wrap gap-12 w-full md:text-lg  text-base ml-5">
                                 {chunker<ISkill>(skills, LIMIT_SKILLS_PER_COLUMN).map((chunk, index: number) => (
                                     <ul key={`list-of-skill-chunk-${index}`} className="list-disc">
                                         {listSkills(chunk)}

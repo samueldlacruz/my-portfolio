@@ -33,7 +33,7 @@ const HeaderNavigation = ({ items }: { items: INavigationItem[] }) => {
             <div className="items-center justify-between py-4 flex md:hidden">
                 <div className="flex items-center">
                     <button className="text-gray-400 group-hover:text-white hover:text-gray-100 focus:outline-none focus:text-gray-600" onClick={handleToggle}>
-                        <svg className="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                        <svg className="h-8 w-8 fill-current" viewBox="0 0 24 24">
                             {isOpen ? (
                                 <path
                                     fillRule="evenodd"
@@ -90,7 +90,15 @@ const Header = ({ userEmail }: { userEmail?: string }) => {
                 <a href="#">
                     <img src={SKeyIconSrc} className="md:w-12 md:h-12 h-8 w-8 ease-out duration-75 opacity-25 group-hover:opacity-100" alt="" />
                 </a>
-                <HeaderNavigation items={appMenuItems} />
+                <div className="flex items-center gap-4">
+                    <a
+                        href={`mailto:${userEmail}`}
+                        className={"hover:bg-slate-500 block md:hidden opacity-50 group-hover:opacity-100 hover:opacity-100 cursor-pointer bg-slate-500/50 px-4 py-1 rounded-sm"}
+                    >
+                        Get In Touch
+                    </a>
+                    <HeaderNavigation items={appMenuItems} />
+                </div>
             </div>
         </header>
     )
