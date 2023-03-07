@@ -50,6 +50,11 @@ function App() {
           <meta property="og:title" content={`${userInfo?.fullName}'s portfolio`} />
           <meta property="og:type" content="profile" />
           <meta property="og:url" content={appConfig?.url} />
+          <link
+            rel="canonical"
+            href={appConfig?.url}
+          />
+
           <meta property="og:image" content={userPicture} />
           <meta property="og:image:width" content="1200" />
           <meta property="og:image:height" content="630" />
