@@ -2,7 +2,7 @@
     "app": {
         "title": "Samuel de la Cruz G. | Frontend Developer",
         "url": "https://samueldlacruz.netlify.app/",
-        "logoUrl": "",
+        "logoUrl": "/images/brand/logo.png",
         "description": "Samuel de la Cruz G. is a Web developer with experience in HTML, CSS, JavaScript (React and Vue), Node.js and more."
     },
     "user": {
@@ -12,7 +12,7 @@
         "roles": [
             "Frontend Developer"
         ],
-        "aboutMe": "I started as a teenager by creating a file in my notepad with the EXE extension and the \"START\" command inside, then I learned HTML, CSS, and javascript, and now I'm a software developer working as a front-end developer.",
+        "aboutMe": "I started as a teenager by creating a file in my notepad with the <strong>EXE</strong> extension and the \"START\" command inside, then I learned HTML, CSS, and javascript, and now I'm a software developer working as a front-end developer.",
         "email": "samueldlacg@gmail.com",
         "skills": [
             {

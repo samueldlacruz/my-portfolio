@@ -2,7 +2,7 @@ import SKeyIconSrc from '../assets/s-key.png';
 import { INavigationItem } from '../interfaces/components/NavigationItem';
 import HeaderNavigation from './HeaderNavigation';
 
-const Header = ({ userEmail }: { userEmail?: string }) => {
+const Header = ({ userEmail, logoUrl }: { userEmail?: string, logoUrl: string }) => {
 
     const appMenuItems: Array<INavigationItem> = [
         {
@@ -29,7 +29,7 @@ const Header = ({ userEmail }: { userEmail?: string }) => {
             <div className="w-full flex items-center justify-between">
                 
                 <a href="/">
-                    <img src={SKeyIconSrc} className="md:w-12 md:h-12 h-8 w-8 ease-out duration-75 opacity-50 hover:opacity-100" alt="logo" />
+                    <img src={logoUrl} className="md:w-12 md:h-12 h-8 w-8 ease-out duration-75 opacity-50 hover:opacity-100" alt="logo" />
                 </a>
                 
                 <div className="flex items-center gap-4">

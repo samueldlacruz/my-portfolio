@@ -1,3 +1,4 @@
+import DOMPurify from 'dompurify';
 import hammerIconSrc from '../assets/hammer.png';
 import ironmanIconSrc from '../assets/iron-man.png';
 import webBugIconSrc from '../assets/web-bug.png';
@@ -40,6 +41,10 @@ const AboutMeSection = (
         </li>
     );
 
+    const sanitizedDescription = () => ({
+        __html: DOMPurify.sanitize(personalDetails.aboutMe)
+    })
+
     return (
         <section id="aboutMe" className="h-auto gap-10 px-10 py-20 flex md:flex-row flex-col md:items-center items-start md:justify-center justify-start">
             <div className="md:w-9/12 w-full">
@@ -48,7 +53,7 @@ const AboutMeSection = (
 
                     <div>
                         <h2 className="md:text-5xl text-3xl font-medium mb-3 border-b-2 border-white/20">About Me</h2>
-                        <p className="text-xl mt-5">{personalDetails.aboutMe}</p>
+                        <p className="text-xl mt-5" dangerouslySetInnerHTML={sanitizedDescription()}></p>
 
                         <div className="flex gap-4 flex-wrap flex-row items-center md:justify-around justify-center my-10">
                             {externalLinks.map((item: IExternalLink, index: number) => <ExternalLinkButton key={`external-link-button-${index}`} {...item} />)}
