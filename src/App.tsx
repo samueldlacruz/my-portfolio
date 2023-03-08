@@ -43,9 +43,14 @@ function App() {
       <HelmetProvider>
         <Helmet>
           <title>{appConfig?.title}</title>
+          
+          <meta itemProp="name" content={appConfig?.name} />
+          <meta itemProp="description" content={appConfig?.description} />
+          <meta itemProp="image" content={appConfig?.logoUrl} />
           <link rel="icon" type="image/png" href={appConfig.logoUrl} />
           <meta name="description" content={appConfig?.description} />
           <meta name={userInfo?.fullName} content="Author name" />
+         
           <meta property="og:title" content={`${userInfo?.fullName}'s portfolio`} />
           <meta property="og:type" content="profile" />
           <meta property="og:url" content={appConfig?.url} />
