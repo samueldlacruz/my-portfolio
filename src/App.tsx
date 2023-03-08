@@ -39,61 +39,32 @@ function App() {
 
 
   return (
-    <>
-      <HelmetProvider>
-        <Helmet>
-          <title>{appConfig?.title}</title>
-            <link
-              rel="canonical"
-              href={appConfig?.url}
-            />
-          <link rel="icon" type="image/png" href={appConfig.logoUrl} />
-          <meta name="description" content={appConfig?.description} />
-          <meta name={userInfo?.fullName} content="Author name" />
 
-          {/* <!-- Google / Search Engine Tags --> */}
-          <meta itemProp="name" content={appConfig?.name} />
-          <meta itemProp="description" content={appConfig?.description} />
-          <meta itemProp="image" content={appConfig?.logoUrl} />
-          
-          {/* <!-- Facebook Meta Tags --> */}
-          <meta property="og:url" content={appConfig?.url} />
-          <meta property="og:type" content="website" />
-          <meta property="og:title" content={`${userInfo?.fullName}'s portfolio`} />
-          <meta
-            property="og:description"
-            content={appConfig?.description}
-          />
-          <meta property="og:image" content={userInfo?.picture} />
-        </Helmet>
+    <main className="text-white">
+      <Header
+        userEmail={userInfo.email}
+        logoUrl={appConfig.logoUrl}
+      />
 
-        <main className="text-white">
-          <Header
-            userEmail={userInfo.email}
-            logoUrl={appConfig.logoUrl}
-          />
+      <HeroSection fullName={userInfo.fullName} roles={userInfo.roles} />
 
-          <HeroSection fullName={userInfo.fullName} roles={userInfo.roles} />
+      <AboutMeSection
+        personalDetails={{ aboutMe: userInfo.aboutMe, userPicture: userInfo?.picture }}
+        skills={userInfo.skills}
+        externalLinks={externalLinks()}
+      />
 
-          <AboutMeSection
-            personalDetails={{ aboutMe: userInfo.aboutMe, userPicture: userInfo?.picture }}
-            skills={userInfo.skills}
-            externalLinks={externalLinks()}
-          />
+      <ExperinceBoard experiences={userExperinces} />
 
-          <ExperinceBoard experiences={userExperinces} />
+      <ProjectsSection projects={projects} />
 
-          <ProjectsSection projects={projects} />
-
-          {/* Footer */}
-          <div className="flex flex-col mt-1 items-center justify-center w-full mb-4">
-            <span className="mb-2">&copy; all rights reserved</span>
-            <img src={appConfig.logoUrl} className="md:w-10 md:h-10 h-8 w-8 opacity-25" alt="logo" />
-            <small className="mt-3">{userInfo.fullName}</small>
-          </div>
-        </main>
-      </HelmetProvider>
-    </>
+      {/* Footer */}
+      <div className="flex flex-col mt-1 items-center justify-center w-full mb-4">
+        <span className="mb-2">&copy; all rights reserved</span>
+        <img src={appConfig.logoUrl} className="md:w-10 md:h-10 h-8 w-8 opacity-25" alt="logo" />
+        <small className="mt-3">{userInfo.fullName}</small>
+      </div>
+    </main>
   )
 }
 
