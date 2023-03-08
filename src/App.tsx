@@ -43,32 +43,28 @@ function App() {
       <HelmetProvider>
         <Helmet>
           <title>{appConfig?.title}</title>
-          
-          <meta itemProp="name" content={appConfig?.name} />
-          <meta itemProp="description" content={appConfig?.description} />
-          <meta itemProp="image" content={appConfig?.logoUrl} />
+            <link
+              rel="canonical"
+              href={appConfig?.url}
+            />
           <link rel="icon" type="image/png" href={appConfig.logoUrl} />
           <meta name="description" content={appConfig?.description} />
           <meta name={userInfo?.fullName} content="Author name" />
-         
-          <meta property="og:title" content={`${userInfo?.fullName}'s portfolio`} />
-          <meta property="og:type" content="profile" />
-          <meta property="og:url" content={appConfig?.url} />
-          <link
-            rel="canonical"
-            href={appConfig?.url}
-          />
 
-          <meta property="og:image" content={userInfo?.picture} />
-          <meta property="og:image:width" content="1200" />
-          <meta property="og:image:height" content="630" />
-          <meta property="og:image:type" content="image/jpeg" />
-          <meta property="og:site_name" content={appConfig?.title} />
+          {/* <!-- Google / Search Engine Tags --> */}
+          <meta itemProp="name" content={appConfig?.name} />
+          <meta itemProp="description" content={appConfig?.description} />
+          <meta itemProp="image" content={appConfig?.logoUrl} />
+          
+          {/* <!-- Facebook Meta Tags --> */}
+          <meta property="og:url" content={appConfig?.url} />
+          <meta property="og:type" content="website" />
+          <meta property="og:title" content={`${userInfo?.fullName}'s portfolio`} />
           <meta
             property="og:description"
             content={appConfig?.description}
           />
-          <meta property="og:locale" content="en_US" />
+          <meta property="og:image" content={userInfo?.picture} />
         </Helmet>
 
         <main className="text-white">
