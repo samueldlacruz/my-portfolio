@@ -6,7 +6,6 @@ import ProjectsSection from "./components/ProjectsSection"
 import { useGetProfileData } from "./hooks/useGetProfileData"
 import { socialMediaIcons } from "./utils/socialMediaIcons"
 
-import userPicture from './assets/me.jpeg';
 import fileIconSrc from "./assets/file-empty.png";
 import SKeyIconSrc from './assets/s-key.png';
 import IExperience from "./interfaces/common/Experience"
@@ -27,7 +26,7 @@ function App() {
       "linkedin": "Hire Me!"
     }
 
-    let links = [{ label: "My Resume", iconSrc: fileIconSrc, href: "/currinculum.pdf" }]
+    let links = [{ label: "My Resume", iconSrc: fileIconSrc, href: userInfo.currinculumUrl }]
 
     let socialMedias = userInfo.socialMedias.map((socialMedia: { name: string, link: string }) => ({
       label: externalLinkLabels[socialMedia.name] || socialMedia.name,
@@ -55,7 +54,7 @@ function App() {
             href={appConfig?.url}
           />
 
-          <meta property="og:image" content={userPicture} />
+          <meta property="og:image" content={userInfo?.picture} />
           <meta property="og:image:width" content="1200" />
           <meta property="og:image:height" content="630" />
           <meta property="og:image:type" content="image/jpeg" />
@@ -73,7 +72,7 @@ function App() {
           <HeroSection fullName={userInfo.fullName} roles={userInfo.roles} />
 
           <AboutMeSection
-            personalDetails={{ aboutMe: userInfo.aboutMe, userPicture: userPicture }}
+            personalDetails={{ aboutMe: userInfo.aboutMe, userPicture: userInfo?.picture }}
             skills={userInfo.skills}
             externalLinks={externalLinks()}
           />

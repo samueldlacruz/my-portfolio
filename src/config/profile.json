@@ -2,11 +2,13 @@
     "app": {
         "title": "Samuel de la Cruz G. | Frontend Developer",
         "url": "https://samueldlacruz.netlify.app/",
+        "logoUrl": "",
         "description": "Samuel de la Cruz G. is a Web developer with experience in HTML, CSS, JavaScript (React and Vue), Node.js and more."
     },
     "user": {
         "fullName": "Samuel de la Cruz G.",
-        "currinculumUrl": "http://www.elasticsearch.org/search/?",
+        "currinculumUrl": "/documents/cv/currinculum.pdf",
+        "picture": "/images/profile/me.jpeg", 
         "roles": [
             "Frontend Developer"
         ],

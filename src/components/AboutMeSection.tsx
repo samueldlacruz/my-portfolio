@@ -44,7 +44,7 @@ const AboutMeSection = (
         <section id="aboutMe" className="h-auto gap-10 px-10 py-20 flex md:flex-row flex-col md:items-center items-start md:justify-center justify-start">
             <div className="md:w-9/12 w-full">
                 <div className="flex gap-14 lg:flex-row flex-col">
-                    <img src={personalDetails.userPicture} className="h-64 w-64 rounded hover:rotate-0 duration-75 ease-in -rotate-3 border-[0.7rem] border-white" alt="user's profile picture" />
+                    <img src={personalDetails.userPicture} className="h-64 w-64 min-w-[269px] object-fill bg-top rounded hover:rotate-0 duration-75 ease-in -rotate-3 border-[0.7rem] border-white" alt="user's profile picture" />
 
                     <div>
                         <h2 className="md:text-5xl text-3xl font-medium mb-3 border-b-2 border-white/20">About Me</h2>
