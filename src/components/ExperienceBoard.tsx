@@ -25,7 +25,7 @@ export const ExperienceCard = (props: IExperience) => {
 }
 
 
-const ExperinceBoard = ({ experiences }: { experiences: IExperience[] }) => {
+const ExperienceBoard = ({ experiences }: { experiences: IExperience[] }) => {
 
     return (
         <section id="experience" className="h-auto py-20 px-10 justify-center flex md:flex-row flex-col">
@@ -44,4 +44,4 @@ const ExperinceBoard = ({ experiences }: { experiences: IExperience[] }) => {
     )
 }
 
-export default ExperinceBoard
+export default ExperienceBoard

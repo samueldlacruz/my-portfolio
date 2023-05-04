@@ -1,5 +1,5 @@
 import AboutMeSection from "./components/AboutMeSection"
-import ExperinceBoard from "./components/ExperinceBoard"
+import ExperienceBoard from "./components/ExperienceBoard"
 import Header from "./components/Header"
 import HeroSection from "./components/HeroSection"
 import ProjectsSection from "./components/ProjectsSection"
@@ -53,7 +53,7 @@ function App() {
         externalLinks={externalLinks()}
       />
 
-      <ExperinceBoard experiences={userExperinces} />
+      <ExperienceBoard experiences={userExperinces} />
 
       <ProjectsSection projects={projects} />
 
