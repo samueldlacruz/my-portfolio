@@ -1,5 +1,5 @@
 
-import fileIconSrc from "./assets/file-empty.png"
+import fileIconSrc from "@assets/file-empty.png"
 import { useProfile } from "@contexts/profile/hooks/useProfile"
 import Header from "@components/Header"
 import HeroSection from "@components/HeroSection"

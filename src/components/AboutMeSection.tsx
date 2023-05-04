@@ -1,7 +1,7 @@
 import DOMPurify from 'dompurify';
-import hammerIconSrc from '../assets/hammer.png';
-import ironManIconSrc from '../assets/iron-man.png';
-import webBugIconSrc from '../assets/web-bug.png';
+import hammerIconSrc from '@assets/hammer.png';
+import ironManIconSrc from '@assets/iron-man.png';
+import webBugIconSrc from '@assets/web-bug.png';
 import { IExternalLink } from '@interfaces/ExternalLink';
 import { ISkill } from '@interfaces/common/Skill';
 import { LIMIT_SKILLS_PER_COLUMN } from '@constants/skills.constants';
