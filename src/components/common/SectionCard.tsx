@@ -12,7 +12,7 @@ const SectionCard = ({ id, title, iconSrc, className, children, ...restProps }: 
     return (
         <section
             id={id}
-            className={`${className ?? ""} md:h-screen h-auto py-20 px-10 justify-center flex md:flex-row flex-col`}
+            className={`${className ?? ""} md:h-screen h-auto py-20 md:px-10 px-6 justify-center flex md:flex-row flex-col`}
             {...restProps}
         >
             <div className="w-full md:max-w-5xl max-w-3xl">
