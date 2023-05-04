@@ -7,20 +7,7 @@ import { ISkill } from '@interfaces/common/Skill';
 import { LIMIT_SKILLS_PER_COLUMN } from '@constants/skills.constants';
 import { chunker } from '@utils/chunker';
 import { joinWithSeparator } from '@utils/joinWithSeparator';
-
-export const ExternalLinkButton = ({ iconSrc, href, label }: IExternalLink) => {
-
-    return (
-        <a
-            href={href || "#"}
-            target="_blank"
-            className="flex gap-3 items-end border-2 hover:bg-slate-50/5 ease-in-out duration-75 hover:cursor-pointer border-slate-50/10 rounded px-5 py-2"
-        >
-            <span className="text-lg">{label}</span>
-            <img src={iconSrc} className="w-8 h-8" alt={`${label} icon`} />
-        </a>
-    )
-}
+import { ExternalLinkButton } from './ExternalLinkButton';
 
 const AboutMeSection = (
     {
