@@ -1,4 +1,3 @@
-import SKeyIconSrc from '../assets/s-key.png';
 import { INavigationItem } from '../interfaces/components/NavigationItem';
 import HeaderNavigation from './HeaderNavigation';
 
@@ -29,7 +28,7 @@ const Header = ({ userEmail, logoUrl }: { userEmail?: string, logoUrl: string })
             <div className="w-full flex items-center justify-between">
                 
                 <a href="/">
-                    <img src={logoUrl} className="md:w-12 md:h-12 h-8 w-8 ease-out duration-75 opacity-50 hover:opacity-100" alt="logo" />
+                    <img src={logoUrl} className="md:w-12 md:h-12 h-11 w-11 ease-out duration-75 hover:opacity-100" alt="logo" />
                 </a>
                 
                 <div className="flex items-center gap-4">
