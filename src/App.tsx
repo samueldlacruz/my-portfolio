@@ -15,14 +15,14 @@ function App() {
   const userInfo = useGetProfileData(["user"])
   const appConfig = useGetProfileData(["app"])
 
-  const userExperinces: IExperience[] = useGetProfileData(["experinces"]);
+  const userExperiences: IExperience[] = useGetProfileData(["experiences"]);
   const projects: IProject[] = useGetProfileData(["projects"]);
 
   const externalLinks = () => {
 
     let externalLinkLabels: { [key: string]: string } = {
-      "github": "See My Projects",
-      "linkedin": "Hire Me!"
+      "github": "my projects",
+      "linkedin": "Hire me!"
     }
 
     let links = [{ label: "My Resume", iconSrc: fileIconSrc, href: userInfo.currinculumUrl }]
@@ -53,7 +53,7 @@ function App() {
         externalLinks={externalLinks()}
       />
 
-      <ExperienceBoard experiences={userExperinces} />
+      <ExperienceBoard experiences={userExperiences} />
 
       <ProjectsSection projects={projects} />
 
