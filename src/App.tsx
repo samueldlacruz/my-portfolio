@@ -6,7 +6,6 @@ import ProjectsSection from "./components/ProjectsSection"
 import { useGetProfileData } from "./hooks/useGetProfileData"
 import { socialMediaIcons } from "./utils/socialMediaIcons"
 
-import { Helmet, HelmetProvider } from "react-helmet-async"
 import fileIconSrc from "./assets/file-empty.png"
 import IExperience from "./interfaces/common/Experience"
 import { IProject } from "./interfaces/common/Project"
