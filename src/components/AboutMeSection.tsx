@@ -1,6 +1,6 @@
 import DOMPurify from 'dompurify';
 import hammerIconSrc from '../assets/hammer.png';
-import ironmanIconSrc from '../assets/iron-man.png';
+import ironManIconSrc from '../assets/iron-man.png';
 import webBugIconSrc from '../assets/web-bug.png';
 import { LIMIT_SKILLS_PER_COLUMN } from '../constants/skills.constants';
 import { ISkill } from '../interfaces/common/Skill';
@@ -82,7 +82,7 @@ const AboutMeSection = (
                                 </div>
 
                                 <div className="w-20 h-20 mt-3 -rotate-12 hover:rotate-12 hover:scale-[1.04] duration-75">
-                                    <img src={ironmanIconSrc} />
+                                    <img src={ironManIconSrc} />
                                 </div>
                             </div>
                         </div>
