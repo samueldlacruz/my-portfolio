@@ -1,5 +1,6 @@
 import { IProject } from "@interfaces/common/Project";
 import programmingIconSrc from "@assets/programming.png";
+import SectionCard from "./common/SectionCard";
 
 export const ProjectCard = (props: IProject) => {
 
@@ -34,21 +35,19 @@ export const ProjectCard = (props: IProject) => {
 const ProjectsSection = ({ projects }: { projects: IProject[] }) => {
 
     return (
-        <section id="projects" className="md:h-screen h-auto py-20 px-10 justify-center flex md:flex-row flex-col">
-            <div className="w-full md:max-w-5xl max-w-3xl">
-                <h2 className="md:text-5xl text-4xl flex items-center font-medium mb-3 border-b-2 border-white/20">
-                    <img src={programmingIconSrc} className="h-12" alt="" />
-                    <span className="ml-3">Projects</span>
-                </h2>
-                <div className="mt-8 grid md:grid-cols-6 grid-cols-1 gap-5 items-center justify-center">
-                    {projects && projects?.map((project, index) => (
-                        <div key={`user-project-item-${index}`} className="lg:col-span-2 md:col-span-3 col-span-1">
-                            <ProjectCard  {...project} />
-                        </div>
-                    ))}
-                </div>
+        <SectionCard
+            title="Projects"
+            id="projects"
+            iconSrc={programmingIconSrc}
+        >
+            <div className="mt-8 grid md:grid-cols-6 grid-cols-1 gap-5 items-center justify-center">
+                {projects && projects?.map((project, index) => (
+                    <div key={`user-project-item-${index}`} className="lg:col-span-2 md:col-span-3 col-span-1">
+                        <ProjectCard  {...project} />
+                    </div>
+                ))}
             </div>
-        </section>
+        </SectionCard>
     )
 }
 
