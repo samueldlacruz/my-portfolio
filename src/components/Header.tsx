@@ -1,7 +1,7 @@
 import { INavigationItem } from '../interfaces/NavigationItem';
 import HeaderNavigation from './HeaderNavigation';
 
-const Header = ({ userEmail, logoUrl }: { userEmail?: string, logoUrl: string }) => {
+const Header = ({ userEmail, logoUrl }: { userEmail?: string, logoUrl?: string }) => {
 
     const appMenuItems: Array<INavigationItem> = [
         {
@@ -26,11 +26,15 @@ const Header = ({ userEmail, logoUrl }: { userEmail?: string, logoUrl: string })
     return (
         <header className="fixed z-20 backdrop-blur-sm flex justify-end bg-slate-700/10 py-3 md:px-5 px-2 w-full">
             <div className="w-full flex items-center justify-between">
-                
-                <a href="/">
-                    <img src={logoUrl} className="md:w-12 md:h-12 h-11 w-11 ease-out duration-75 hover:opacity-100" alt="logo" />
-                </a>
-                
+
+                <div>
+                    {logoUrl && (
+                        <a href="/">
+                            <img src={logoUrl} className="md:w-12 md:h-12 h-11 w-11 ease-out duration-75 hover:opacity-100" alt="logo" />
+                        </a>
+                    )}
+                </div>
+
                 <div className="flex items-center gap-4">
                     <a
                         href={`mailto:${userEmail}`}
