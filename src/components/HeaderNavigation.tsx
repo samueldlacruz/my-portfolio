@@ -1,5 +1,5 @@
+import { INavigationItem } from "@interfaces/NavigationItem";
 import { useState } from "react";
-import { INavigationItem } from "../interfaces/NavigationItem";
 
 const HeaderNavigation = ({ items }: { items: INavigationItem[] }) => {
 

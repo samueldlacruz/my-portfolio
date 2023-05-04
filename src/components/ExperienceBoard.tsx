@@ -1,5 +1,5 @@
+import IExperience from "@interfaces/common/Experience";
 import businessIconSrc from "../assets/business.png";
-import IExperience from "../interfaces/common/Experience";
 
 export const ExperienceCard = (props: IExperience) => {
 

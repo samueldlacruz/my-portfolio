@@ -1,6 +1,6 @@
 import { ReactNode, createContext } from "react";
-import { IProfile } from "../../interfaces/common/Profile";
-import profileDataJson from '../../config/profile.json';
+import profileDataJson from '@config/profile.json';
+import { IProfile } from "@interfaces/common/Profile";
 
 export const ProfileContext = createContext<IProfile | null>(null)
 

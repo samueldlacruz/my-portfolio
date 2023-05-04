@@ -1,4 +1,4 @@
-import { joinWithSeparator } from "../utils/joinWithSeparator";
+import { joinWithSeparator } from "@utils/joinWithSeparator"
 
 const HeroSection = ({ fullName, roles }: { fullName: string, roles: string[] }) => {
 

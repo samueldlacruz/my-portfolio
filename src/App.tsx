@@ -1,12 +1,12 @@
-import AboutMeSection from "./components/AboutMeSection"
-import ExperienceBoard from "./components/ExperienceBoard"
-import Header from "./components/Header"
-import HeroSection from "./components/HeroSection"
-import ProjectsSection from "./components/ProjectsSection"
-import { socialMediaIcons } from "./utils/socialMediaIcons"
 
 import fileIconSrc from "./assets/file-empty.png"
-import { useProfile } from "./contexts/profile/hooks/useProfile"
+import { useProfile } from "@contexts/profile/hooks/useProfile"
+import Header from "@components/Header"
+import HeroSection from "@components/HeroSection"
+import AboutMeSection from "@components/AboutMeSection"
+import ExperienceBoard from "@components/ExperienceBoard"
+import ProjectsSection from "@components/ProjectsSection"
+import { socialMediaIcons } from "@utils/socialMediaIcons"
 
 const App = () => {
 

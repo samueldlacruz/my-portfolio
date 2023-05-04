@@ -1,5 +1,6 @@
-import { INavigationItem } from '../interfaces/NavigationItem';
-import HeaderNavigation from './HeaderNavigation';
+import { INavigationItem } from "@interfaces/NavigationItem"
+import HeaderNavigation from "./HeaderNavigation"
+
 
 const Header = ({ userEmail, logoUrl }: { userEmail?: string, logoUrl?: string }) => {
 

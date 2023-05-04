@@ -2,11 +2,11 @@ import DOMPurify from 'dompurify';
 import hammerIconSrc from '../assets/hammer.png';
 import ironManIconSrc from '../assets/iron-man.png';
 import webBugIconSrc from '../assets/web-bug.png';
-import { LIMIT_SKILLS_PER_COLUMN } from '../constants/skills.constants';
-import { ISkill } from '../interfaces/common/Skill';
-import { IExternalLink } from '../interfaces/ExternalLink';
-import { chunker } from '../utils/chunker';
-import { joinWithSeparator } from '../utils/joinWithSeparator';
+import { IExternalLink } from '@interfaces/ExternalLink';
+import { ISkill } from '@interfaces/common/Skill';
+import { LIMIT_SKILLS_PER_COLUMN } from '@constants/skills.constants';
+import { chunker } from '@utils/chunker';
+import { joinWithSeparator } from '@utils/joinWithSeparator';
 
 export const ExternalLinkButton = ({ iconSrc, href, label }: IExternalLink) => {
 

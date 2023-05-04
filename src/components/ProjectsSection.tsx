@@ -1,5 +1,5 @@
+import { IProject } from "@interfaces/common/Project";
 import programmingIconSrc from "../assets/programming.png";
-import { IProject } from "../interfaces/common/Project";
 
 export const ProjectCard = (props: IProject) => {
 
