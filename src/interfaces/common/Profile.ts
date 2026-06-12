@@ -1,6 +1,7 @@
 import IExperience from "./Experience";
 import { IProject } from "./Project";
 import { ISkill } from "./Skill";
+import { ICertificate } from "./Certificate";
 
 interface App {
   title: string;
@@ -31,4 +32,5 @@ export interface IProfile {
   user: User;
   experiences?: IExperience[];
   projects?: IProject[];
+  certificates?: ICertificate[];
 }

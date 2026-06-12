@@ -1,13 +1,9 @@
 import DOMPurify from 'dompurify';
-import hammerIconSrc from '@assets/hammer.png';
-import ironManIconSrc from '@assets/iron-man.png';
-import webBugIconSrc from '@assets/web-bug.png';
 import { IExternalLink } from '@interfaces/ExternalLink';
 import { ISkill } from '@interfaces/common/Skill';
-import { LIMIT_SKILLS_PER_COLUMN } from '@constants/skills.constants';
-import { chunker } from '@utils/chunker';
 import { joinWithSeparator } from '@utils/joinWithSeparator';
 import { ExternalLinkButton } from './ExternalLinkButton';
+import ScrollReveal from '../common/ScrollReveal';
 
 const AboutMeSection = (
     {
@@ -20,11 +16,13 @@ const AboutMeSection = (
         externalLinks: IExternalLink[]
     }) => {
 
-
     const listSkills = (list: ISkill[]) => list.map((skill, index: number) =>
-        <li key={`skill-item-${index}`} className="whitespace-nowrap">
-            {skill.skill}{" "}
-            <small className="md:inline-block hidden">{(skill.specifics && skill.specifics.length !== 0) && `( ${joinWithSeparator(skill.specifics)} )`}</small>
+        <li key={`skill-item-${index}`} className="whitespace-nowrap text-sm text-white/60">
+            <span className="text-accent/70 mr-2">{'>'}</span>
+            {skill.skill}
+            {(skill.specifics && skill.specifics.length !== 0) && (
+                <span className="text-white/40">({joinWithSeparator(skill.specifics)})</span>
+            )}
         </li>
     );
 
@@ -33,51 +31,48 @@ const AboutMeSection = (
     })
 
     return (
-        <section id="aboutMe" className="h-auto gap-10 px-10 py-20 flex md:flex-row flex-col md:items-center items-start md:justify-center justify-start">
-            <div className="md:w-9/12 w-full">
-                <div className="flex gap-14 lg:flex-row flex-col">
-                    <img src={personalDetails.userPicture} className="h-64 w-64 min-w-[269px] object-fill bg-top rounded hover:rotate-0 duration-75 ease-in -rotate-3 border-[0.7rem] border-white" alt="user's profile picture" />
+        <section id="aboutMe" className="min-h-screen flex items-center justify-center px-6 py-24">
+            <div className="w-full max-w-3xl">
+                <ScrollReveal>
+                    <p className="section-title">// about me</p>
+                </ScrollReveal>
 
-                    <div>
-                        <h2 className="md:text-5xl text-3xl font-medium mb-3 border-b-2 border-white/20">About Me</h2>
-                        <p className="text-xl mt-5" dangerouslySetInnerHTML={sanitizedDescription()}></p>
+                <ScrollReveal delay={100}>
+                    <div className="flex flex-col items-center text-center">
+                        <img
+                            src={personalDetails.userPicture}
+                            className="h-36 w-36 rounded-full object-cover border border-white/10 mb-8"
+                            alt="profile"
+                        />
 
-                        <div className="flex gap-4 flex-wrap flex-row items-center md:justify-around justify-center my-10">
-                            {externalLinks.map((item: IExternalLink, index: number) => <ExternalLinkButton key={`external-link-button-${index}`} {...item} />)}
-                        </div>
+                        <p
+                            className="text-lg text-white/60 leading-relaxed max-w-xl"
+                            dangerouslySetInnerHTML={sanitizedDescription()}
+                        />
+                    </div>
+                </ScrollReveal>
 
-                        <span className="text-lg">Here are a few technologies I’ve been working with recently:</span>
+                <ScrollReveal delay={200}>
+                    <div className="flex gap-4 flex-wrap items-center justify-center my-10">
+                        {externalLinks.map((item: IExternalLink, index: number) =>
+                            <ExternalLinkButton key={`external-link-button-${index}`} {...item} />
+                        )}
+                    </div>
+                </ScrollReveal>
 
-                        <div className="items-center mt-3 justify-center flex md:flex-row flex-col">
-
-                            <div className="flex flex-wrap gap-12 w-full md:text-lg  text-base ml-5">
-                                {chunker<ISkill>(skills, LIMIT_SKILLS_PER_COLUMN).map((chunk, index: number) => (
-                                    <ul key={`list-of-skill-chunk-${index}`} className="list-disc">
-                                        {listSkills(chunk)}
-                                    </ul>
-                                ))}
-                            </div>
-
-                            <div className="flex flex-col md:mt-0 mt-10 items-center">
-                                <div className="flex">
-                                    <div className="w-20 h-20">
-                                        <img src={hammerIconSrc} className="hover:-rotate-6 duration-75" />
-                                    </div>
-                                    <div className="w-20 h-20 rotate-6 hover:-rotate-12 duration-100">
-                                        <img src={webBugIconSrc} />
-                                    </div>
-                                </div>
-
-                                <div className="w-20 h-20 mt-3 -rotate-12 hover:rotate-12 hover:scale-[1.04] duration-75">
-                                    <img src={ironManIconSrc} />
-                                </div>
-                            </div>
+                <ScrollReveal delay={300}>
+                    <div className="mt-10">
+                        <p className="text-xs uppercase tracking-[0.3em] text-accent/70 mb-4">
+                            / technologies
+                        </p>
+                        <div className="flex flex-wrap gap-x-10 gap-y-2">
+                            {listSkills(skills)}
                         </div>
                     </div>
-                </div>
+                </ScrollReveal>
             </div>
         </section>
     )
 }
 
-export default AboutMeSection
+export default AboutMeSection;

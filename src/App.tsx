@@ -4,6 +4,7 @@ import { useProfile } from "@contexts/profile/hooks/useProfile"
 import Header from "@components/Header"
 import HeroSection from "@components/HeroSection"
 import AboutMeSection from "@/components/AboutMe/AboutMeSection"
+import CertificatesSection from "@/components/Certificates/CertificatesSection"
 import ExperienceBoard from "@/components/Experience/ExperienceBoard"
 import ProjectsSection from "@/components/Project/ProjectsSection"
 import { socialMediaIcons } from "@utils/socialMediaIcons"
@@ -12,17 +13,17 @@ const App = () => {
 
   const {
     user: userInfo, app: appConfig,
-    projects, experiences
+    projects, experiences, certificates
   } = useProfile()
 
   const externalLinks = () => {
 
     let externalLinkLabels: { [key: string]: string } = {
-      "github": "my projects",
-      "linkedin": "Hire me!"
+      "github": "GitHub",
+      "linkedin": "LinkedIn"
     }
 
-    let links = [{ label: "My Resume", iconSrc: fileIconSrc, href: userInfo?.currinculumUrl }]
+    let links = [{ label: "Resume", iconSrc: fileIconSrc, href: userInfo?.currinculumUrl }]
 
     let socialMedias = userInfo?.socialMedias.map((socialMedia: { name: string, link: string }) => ({
       label: externalLinkLabels[socialMedia.name] || socialMedia.name,
@@ -54,6 +55,10 @@ const App = () => {
         />
       )}
 
+      {(certificates && certificates.length !== 0) && (
+        <CertificatesSection certificates={certificates} />
+      )}
+
       {(experiences && experiences.length !== 0) && (
         <ExperienceBoard experiences={experiences} />
       )}
@@ -63,17 +68,9 @@ const App = () => {
       )}
 
       {/* Footer */}
-      <div className="flex flex-col mt-1 items-center justify-center w-full mb-4">
-        <span className="mb-2">&copy; all rights reserved</span>
-        {appConfig?.logoUrl && (
-          <img
-            src={appConfig?.logoUrl}
-            className="md:w-10 md:h-10 h-8 w-8 opacity-25"
-            alt="logo"
-          />
-        )}
-        {userInfo?.fullName && <small className="mt-3">{userInfo?.fullName}</small>}
-      </div>
+      <footer className="flex flex-col items-center justify-center w-full py-16 border-t border-white/5">
+        <span className="text-xs text-white/20 tracking-wider">&copy; {new Date().getFullYear()} Samuel de la Cruz G.</span>
+      </footer>
     </main>
   )
 }

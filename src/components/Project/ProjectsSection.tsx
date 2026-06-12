@@ -1,25 +1,57 @@
 import { IProject } from "@interfaces/common/Project";
-import programmingIconSrc from "@assets/programming.png";
-import SectionCard from "../common/SectionCard";
+import ScrollReveal from "../common/ScrollReveal";
 import { ProjectCard } from "./ProjectCard";
 
 const ProjectsSection = ({ projects }: { projects: IProject[] }) => {
 
-    return (
-        <SectionCard
-            title="Projects"
-            id="projects"
-            iconSrc={programmingIconSrc}
-        >
-            <div className="mt-8 grid md:grid-cols-6 grid-cols-1 gap-5 items-center justify-center">
-                {projects && projects?.map((project, index) => (
-                    <div key={`user-project-item-${index}`} className="lg:col-span-2 md:col-span-3 col-span-1">
-                        <ProjectCard  {...project} />
-                    </div>
-                ))}
-            </div>
-        </SectionCard>
-    )
-}
+    const personalProjects = projects?.filter(p => p.type === 'personal') || [];
+    const workProjects = projects?.filter(p => p.type === 'work') || [];
 
-export default ProjectsSection
+    return (
+        <section id="projects" className="min-h-screen flex items-center justify-center px-6 py-24">
+            <div className="w-full max-w-3xl">
+                <ScrollReveal>
+                    <p className="section-title">// projects</p>
+                </ScrollReveal>
+
+                {workProjects.length > 0 && (
+                    <div className="mt-8">
+                        <ScrollReveal>
+                            <h3 className="text-xs uppercase tracking-[0.2em] text-white/50 mb-4 flex items-center gap-2">
+                                <span className="w-2 h-2 rounded-full bg-white/30"></span>
+                                Work Projects
+                            </h3>
+                        </ScrollReveal>
+                        <div className="grid md:grid-cols-2 gap-4">
+                            {workProjects.map((project, index) => (
+                                <ScrollReveal key={`work-${index}`} delay={index * 80}>
+                                    <ProjectCard {...project} />
+                                </ScrollReveal>
+                            ))}
+                        </div>
+                    </div>
+                )}
+
+                {personalProjects.length > 0 && (
+                    <div className="mt-12">
+                        <ScrollReveal>
+                            <h3 className="text-xs uppercase tracking-[0.2em] text-white/50 mb-4 flex items-center gap-2">
+                                <span className="w-2 h-2 rounded-full border border-white/30"></span>
+                                Personal Projects
+                            </h3>
+                        </ScrollReveal>
+                        <div className="grid md:grid-cols-2 gap-4">
+                            {personalProjects.map((project, index) => (
+                                <ScrollReveal key={`personal-${index}`} delay={index * 80}>
+                                    <ProjectCard {...project} />
+                                </ScrollReveal>
+                            ))}
+                        </div>
+                    </div>
+                )}
+            </div>
+        </section>
+    );
+};
+
+export default ProjectsSection;
