@@ -1,10 +1,12 @@
+import { useTranslation } from "react-i18next";
 import { IProject } from "@/interfaces/common/Project";
 import ProjectPreview from "./ProjectPreview";
 
 export const ProjectCard = (props: IProject) => {
+    const { t } = useTranslation();
 
     return (
-        <div className="project-card overflow-hidden">
+        <div className="project-card overflow-hidden flex flex-col">
             {props.links.production ? (
                 <ProjectPreview url={props.links.production} />
             ) : props.links.code ? (
@@ -13,7 +15,7 @@ export const ProjectCard = (props: IProject) => {
                     <i className="ri-code-s-slash-line text-white/10 group-hover:text-white/30 text-6xl transition-colors"></i>
                 </a>
             ) : null}
-            <div className="p-4">
+            <div className="p-4 flex-1 flex flex-col">
                 <div className="flex items-center justify-between">
                     <span className="text-base font-medium text-white/90">{props.name}</span>
                     <span className={`text-[10px] uppercase tracking-wider px-1.5 py-0.5 rounded-sm ${
@@ -21,10 +23,10 @@ export const ProjectCard = (props: IProject) => {
                             ? 'text-accent/60 border border-accent/20'
                             : 'text-white/30 border border-white/10'
                     }`}>
-                        {props.type}
+                        {props.type === 'work' ? t('projects.work') : t('projects.personal')}
                     </span>
                 </div>
-                <p className="text-sm text-white/40 mt-2 leading-relaxed">
+                <p className="text-sm text-white/40 mt-2 leading-relaxed flex-1">
                     {props.description}
                 </p>
             </div>
@@ -40,12 +42,12 @@ export const ProjectCard = (props: IProject) => {
 
                 <div className="flex gap-2">
                     {props.links.production && (
-                        <a title="live demo" href={props.links.production} target="_blank" rel="noopener noreferrer">
+                        <a title={t('projects.viewDemo')} href={props.links.production} target="_blank" rel="noopener noreferrer">
                             <i className="text-accent/40 hover:text-accent cursor-pointer text-sm ri-external-link-line transition-colors"></i>
                         </a>
                     )}
                     {props.links.code && (
-                        <a title="source code" href={props.links.code} target="_blank" rel="noopener noreferrer">
+                        <a title={t('projects.viewCode')} href={props.links.code} target="_blank" rel="noopener noreferrer">
                             <i className="text-white/30 hover:text-white/70 cursor-pointer text-sm ri-code-s-slash-line transition-colors"></i>
                         </a>
                     )}

@@ -1,29 +1,19 @@
+import { useTranslation } from "react-i18next";
 import { INavigationItem } from "@interfaces/NavigationItem"
 import HeaderNavigation from "./HeaderNavigation"
-
+import LanguageToggle from "./common/LanguageToggle"
 
 const Header = ({ userEmail, logoUrl }: { userEmail?: string, logoUrl?: string }) => {
+    const { t } = useTranslation();
 
     const appMenuItems: Array<INavigationItem> = [
-        {
-            href: "#aboutMe",
-            label: "About"
-        },
-        {
-            href: "#certificates",
-            label: "Certs"
-        },
-        {
-            href: "#experience",
-            label: "Experience"
-        },
-        {
-            href: "#projects",
-            label: "Projects"
-        },
+        { href: "#aboutMe", label: t('nav.about') },
+        { href: "#certificates", label: t('nav.certs') },
+        { href: "#experience", label: t('nav.experience') },
+        { href: "#projects", label: t('nav.projects') },
         ...(userEmail) ? [{
             href: `mailto:${userEmail}`,
-            label: "Contact",
+            label: t('nav.contact'),
             className: "border border-white/20 hover:bg-white/10 px-4 py-1 rounded-sm transition-colors"
         }] : []
     ]
@@ -31,7 +21,6 @@ const Header = ({ userEmail, logoUrl }: { userEmail?: string, logoUrl?: string }
     return (
         <header className="fixed z-20 backdrop-blur-sm flex justify-end bg-[#0a0a0a]/80 py-3 md:px-5 px-2 w-full">
             <div className="w-full flex items-center justify-between">
-
                 <div>
                     {logoUrl && (
                         <a href="/">
@@ -39,13 +28,13 @@ const Header = ({ userEmail, logoUrl }: { userEmail?: string, logoUrl?: string }
                         </a>
                     )}
                 </div>
-
                 <div className="flex items-center gap-4">
+                    <LanguageToggle />
                     <a
                         href={`mailto:${userEmail}`}
                         className="border border-white/20 hover:bg-white/10 px-4 py-1 rounded-sm transition-colors hidden md:block"
                     >
-                        Contact
+                        {t('nav.contact')}
                     </a>
                     <HeaderNavigation items={appMenuItems} />
                 </div>

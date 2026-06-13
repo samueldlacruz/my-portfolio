@@ -1,6 +1,8 @@
+import { useTranslation } from "react-i18next";
 import { ICertificate } from "@/interfaces/common/Certificate";
 
 export const CertificateCard = (props: ICertificate) => {
+    const { t } = useTranslation();
 
     const formatDate = (date: string) => {
         const [year, month] = date.split('-');
@@ -28,7 +30,7 @@ export const CertificateCard = (props: ICertificate) => {
                             rel="noopener noreferrer"
                             className="text-xs text-accent/70 hover:text-accent transition-colors"
                         >
-                            show credential
+                            {t('certificates.showCredential')}
                         </a>
                     )}
                 </div>

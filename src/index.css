@@ -19,7 +19,7 @@
 
 @layer components {
   .project-card {
-    @apply border duration-150 min-h-[225px] ease-out flex flex-col justify-between bg-white/5 backdrop-blur-sm border-white/10 rounded-md;
+    @apply border duration-150 ease-out flex flex-col justify-between bg-white/5 backdrop-blur-sm border-white/10 rounded-md h-full;
   }
 
   .reveal {

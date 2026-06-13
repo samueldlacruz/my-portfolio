@@ -1,10 +1,15 @@
 import { joinWithSeparator } from "@utils/joinWithSeparator"
+import { useTranslation } from "react-i18next"
 
 const HeroSection = ({ fullName, roles }: { fullName: string, roles: string[] }) => {
+    const { t } = useTranslation();
 
     return (
         <section id="#" className="h-screen bg-hero overflow-hidden relative flex justify-center items-center">
             <div className="text-center px-6">
+                <p className="text-xs uppercase tracking-[0.4em] text-accent/50 mb-6 font-light">
+                    {t('hero.welcome')}
+                </p>
                 <h1 className="lg:text-7xl md:text-6xl text-4xl font-light tracking-tight mb-4">
                     {fullName}
                 </h1>

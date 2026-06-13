@@ -1,0 +1,185 @@
+{
+    "app": {
+        "title": "Samuel de la Cruz G. | Software Engineer",
+        "url": "https://samueldlacruz.netlify.app/",
+        "logoUrl": "/images/brand/logo.png",
+        "description": "Samuel de la Cruz G. is a Software Engineer with experience in React, TypeScript, and modern web technologies."
+    },
+    "user": {
+        "fullName": "Samuel de la Cruz G.",
+        "currinculumUrl": "/documents/cv/currinculum.pdf",
+        "picture": "/images/profile/me.jpeg",
+        "roles": [
+            "Software Engineer"
+        ],
+        "aboutMe": "I started as a teenager by creating a file in my notepad with the <strong>EXE</strong> extension and the \"START\" command inside, then I learned HTML, CSS, and javascript, and now I'm a software developer working as a front-end developer.",
+        "email": "samueldlacg@gmail.com",
+        "skills": [
+            { "skill": "HTML5 / CSS3" },
+            { "skill": "Tailwind CSS" },
+            { "skill": "JavaScript", "specifics": ["ES6+"] },
+            { "skill": "React.Js", "specifics": ["Next.js"] },
+            { "skill": "Vue.Js" },
+            { "skill": "TypeScript" },
+            { "skill": "Node.Js" },
+            { "skill": "SQL", "specifics": ["MySQL", "Postgres"] },
+            { "skill": "API Design Knowledge" },
+            { "skill": "GraphQL", "specifics": ["Apollo GraphQL"] }
+        ],
+        "socialMedias": [
+            { "name": "github", "link": "https://github.com/samueldlacruz" },
+            { "name": "linkedin", "link": "https://www.linkedin.com/in/samuel-de-la-cruz-guillermo/" }
+        ]
+    },
+    "experiences": [
+        {
+            "startDate": "2024-06-01",
+            "company": "Consejo Nacional de Competitividad",
+            "companyUrl": "https://competitividad.gob.do/",
+            "role": "Frontend Developer",
+            "location": "Distrito Nacional, Dominican Republic",
+            "description": "Since June 2024, I have been working as a Frontend Developer on digital transformation initiatives focused on public services. I have contributed to the Business Opening (Apertura de Empresa) project, helping design and implement modern, user-centered interfaces that improve the overall user experience of government processes. I have also collaborated with the Passport Authority on UI/UX improvements and with Migration, participating in the co-creation of a flagship digital service and the development of internal tools aligned with institutional needs.",
+            "technologies": ["React.js", "TypeScript", "Tailwind CSS", "Design Thinking", "E-Government"],
+            "type": "work"
+        },
+        {
+            "startDate": "2024-01-01",
+            "endDate": "2024-06-01",
+            "company": "Media Revolution, SRL",
+            "role": "Team Lead Frontend Developer",
+            "location": "Santo Domingo, Dominican Republic",
+            "description": "From January to June 2024, I served as Team Lead Frontend Developer, leading and mentoring a team of frontend developers while supporting the onboarding of new talent. I managed projects using Agile methodologies and tools such as JIRA and Bitbucket, ensuring effective collaboration and timely delivery. On the technical side, I oversaw UI development with React and TypeScript, enforcing best practices, scalability, and performance optimization. I worked extensively on Web3 solutions, including DApps and complex dashboards designed to manage projects for multiple roles such as admins, merchants, and vendors, handling large data streams and concurrent workflows.",
+            "technologies": ["React.js", "TypeScript", "JIRA", "Bitbucket", "Agile", "Web3", "DApps"],
+            "type": "work"
+        },
+        {
+            "startDate": "2020-12-01",
+            "endDate": "2024-01-01",
+            "company": "Media Revolution, SRL",
+            "role": "Frontend Developer",
+            "location": "Santo Domingo, Dominican Republic",
+            "description": "Between December 2020 and January 2024, I worked as a Frontend Developer contributing to the development of scalable and responsive web applications. I built user interfaces from Figma designs using React, Next.js, TypeScript, and Tailwind CSS. I integrated Apollo GraphQL for efficient data fetching and state management, performed testing and debugging with Cypress.io, and collaborated on backend API development to enhance overall application functionality.",
+            "technologies": ["React.js", "Next.js", "TypeScript", "Tailwind CSS", "Apollo GraphQL", "Cypress.io"],
+            "type": "work"
+        },
+        {
+            "startDate": "2020-01-01",
+            "endDate": "2020-12-01",
+            "company": "Autónomo",
+            "role": "Software Developer",
+            "location": "Santo Domingo Este, Dominican Republic",
+            "description": "In 2020, I worked as a self-employed Software Developer, delivering end-to-end solutions for various projects. I designed and developed e-commerce dashboards, defining application flows, business logic, and reusable UI components. I built complete desktop application interfaces using Electron and developed full-featured web dashboards with Vue 2. This experience strengthened my autonomy, problem-solving skills, and ability to deliver practical, user-focused solutions.",
+            "technologies": ["React.js", "Vue.js", "Electron", "Node.js", "Firebase"],
+            "type": "freelance"
+        }
+    ],
+    "projects": [
+        {
+            "name": "Permiso Salida Menor - Migración",
+            "description": "Digital service for minor exit permits, co-created with the Dirección General de Migración as part of the Burocracia Cero program. Designed and developed user-centered interfaces aligned with e-government standards.",
+            "links": { "production": "https://permisosalidamenor.migracion.gob.do/" },
+            "technologies": ["React", "TypeScript", "Tailwind CSS"],
+            "type": "work"
+        },
+        {
+            "name": "BMatrix",
+            "description": "Business strategy matrices — interactive, editable, and exportable to PDF. Choose from 10 classic frameworks including SWOT, BCG, Ansoff, McKinsey, Eisenhower, RACI, Risk, Value vs Effort, How Might We, and Empathy Map. Edit them live or download as a clean PDF.",
+            "links": { "code": "https://github.com/samueldlacruz/bmatrix", "production": "https://bmatrix.vercel.app/" },
+            "technologies": ["React", "TypeScript"],
+            "type": "personal"
+        },
+        {
+            "name": "Liquid Democracy Simulator",
+            "description": "Interactive simulator exploring liquid democracy concepts, enabling delegated voting in a transparent and participatory system.",
+            "links": { "code": "https://github.com/samueldlacruz/liquid-democracy-simulator", "production": "https://liquid-democracy-simulator.vercel.app/" },
+            "technologies": ["React", "TypeScript"],
+            "type": "personal"
+        },
+        {
+            "name": "BMI API",
+            "description": "RESTful API for Body Mass Index calculations, providing endpoints for health metrics processing.",
+            "links": { "code": "https://github.com/samueldlacruz/BMI_API" },
+            "technologies": ["Node.js", "REST API"],
+            "type": "personal"
+        },
+        {
+            "name": "Whanda",
+            "description": "Whanda is a headless JavaScript framework that enables building product catalogs with cart, dynamic pricing, and WhatsApp checkout. It's not traditional e-commerce — it's a simplified sales flow for markets where WhatsApp is the primary closing channel.",
+            "links": { "code": "https://github.com/samueldlacruz/whanda", "production": "https://whanda.vercel.app/" },
+            "technologies": ["React", "TypeScript"],
+            "type": "personal"
+        },
+        {
+            "name": "CeroGanchos",
+            "description": "Platform that helps you identify and prevent financial scams disguised as great opportunities.",
+            "links": { "code": "https://github.com/samueldlacruz/CeroGanchos", "production": "https://cerogancho.netlify.app/" },
+            "technologies": ["React", "Tailwind CSS"],
+            "type": "personal"
+        },
+        {
+            "name": "Raíz y Forma Menu",
+            "description": "Online menu for a deconstructed Dominican cuisine concept | ITSC Gastronomy Student Project.",
+            "links": { "code": "https://github.com/samueldlacruz/raiz-y-forma-menu", "production": "https://restaurante-raizyforma-menu.netlify.app/" },
+            "technologies": ["React", "Tailwind CSS"],
+            "type": "personal"
+        },
+        {
+            "name": "Micro-ecommerce Template",
+            "description": "Simple ecommerce template created with Vue 2 and Tailwind CSS.",
+            "links": { "code": "https://github.com/samueldlacruz/simple-ecommerce-template" },
+            "technologies": ["Vue.js", "Tailwind CSS"],
+            "type": "personal"
+        }
+    ],
+    "certificates": [
+        {
+            "title": "Service Design and User Experience Innovation Program",
+            "issuer": "Instituto Tecnológico de Santo Domingo",
+            "issueDate": "2025-01",
+            "expireDate": "2025-03",
+            "skills": ["Design Thinking", "User Experience (UX)", "Service Design", "Innovation", "Prototyping"],
+            "credentialUrl": "https://www.smartcertificate.com/SmartDiploma/?1%7c31d4fd05-b87f-4ca7-83f8-b37f72f9708d%7cdd8919eb-6ce5-48d3-816f-df81adbd9b0c#/"
+        },
+        {
+            "title": "Time Management and Productivity Workshop",
+            "issuer": "Pontificia Universidad Católica Madre y Maestra",
+            "issueDate": "2024-12",
+            "skills": ["Time Management", "Eisenhower Matrix", "Productivity"]
+        },
+        {
+            "title": "Specialized Course in Strategic Project Direction and Execution",
+            "issuer": "Pontificia Universidad Católica Madre y Maestra",
+            "issueDate": "2024-10",
+            "skills": ["PMI", "Project Management", "Strategic Planning", "Project Execution", "Risk Management"],
+            "fileUrl": "/documents/certificates/TEP_curso especializado_direccion_proyectos.pdf"
+        },
+        {
+            "title": "Fundamentals of Agile Project Management",
+            "issuer": "Project Management Institute",
+            "issueDate": "2024-12",
+            "skills": ["Agile Methodologies", "Sprint Backlog", "Scrum"],
+            "credentialUrl": "https://www.credly.com/badges/dfb5e18f-7a9a-41ca-ae7e-353ce3e9a6ac/linked_in_profile"
+        },
+        {
+            "title": "Fundamentals of Predictive Project Management",
+            "issuer": "Project Management Institute",
+            "issueDate": "2024-12",
+            "skills": ["Risk Management", "Project Management", "Waterfall"],
+            "credentialUrl": "https://www.credly.com/badges/79b3be23-1588-448a-93ed-9b0fb438325c/linked_in_profile"
+        },
+        {
+            "title": "Learn Backend Programming in C# .NET",
+            "issuer": "Udemy",
+            "issueDate": "2023-01",
+            "skills": ["C#", ".NET Framework", "Backend Development", "API Development", "Object-Oriented Programming"],
+            "credentialUrl": "https://www.udemy.com/certificate/UC-c712170e-0848-4f71-bbac-2fb11ffd786f/"
+        },
+        {
+            "title": "Responsive Web Design",
+            "issuer": "freeCodeCamp",
+            "issueDate": "2023-01",
+            "skills": ["Responsive Web Design", "HTML5", "CSS3"],
+            "credentialUrl": "https://www.freecodecamp.org/certification/sami_freecodecamp/responsive-web-design"
+        }
+    ]
+}

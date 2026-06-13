@@ -1,0 +1,38 @@
+{
+    "nav": {
+        "about": "About",
+        "certs": "Certs",
+        "experience": "Experience",
+        "projects": "Projects",
+        "contact": "Contact"
+    },
+    "hero": {
+        "welcome": "welcome",
+        "role": "Software Engineer"
+    },
+    "about": {
+        "title": "// about",
+        "technologies": "/ technologies"
+    },
+    "certificates": {
+        "title": "// certifications",
+        "showCredential": "show credential"
+    },
+    "experience": {
+        "title": "// experience",
+        "present": "Present"
+    },
+    "projects": {
+        "title": "// projects",
+        "work": "Work Projects",
+        "personal": "Personal Projects",
+        "viewDemo": "live demo",
+        "viewCode": "source code"
+    },
+    "footer": {
+        "copyright": "© 2026 Samuel de la Cruz G."
+    },
+    "language": {
+        "toggle": "ES"
+    }
+}
